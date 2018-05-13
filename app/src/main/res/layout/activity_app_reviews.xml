@@ -1,35 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:padding="20dp">
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/tv_app_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/sample_rating"
-            android:textColor="@color/black"
-            android:textSize="60sp" />
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating1"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="20"
+            app:donut_finished_color="@color/colorProgressRating5"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="40"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="40" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating2"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="15"
+            app:donut_finished_color="@color/colorProgressRating4"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="30"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="30" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating3"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="10"
+            app:donut_finished_color="@color/colorProgressRating3"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="50"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="50" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating4"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="5"
+            app:donut_finished_color="@color/colorProgressRating2"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="70"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="70" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="0"
+            app:donut_finished_color="@color/colorProgressRating1"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="90"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="90" />
 
         <LinearLayout
             android:id="@+id/ll_stars"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignBottom="@+id/tv_app_rating"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_marginEnd="5dp"
             android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/tv_app_rating"
-            android:gravity="bottom"
+            android:gravity="center"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_app_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/sample_rating"
+                android:textColor="@color/colorGrey"
+                android:textSize="60sp"
+                android:textStyle="bold" />
 
             <me.zhanghai.android.materialratingbar.MaterialRatingBar
                 android:id="@+id/rb_app"
@@ -49,68 +131,6 @@
                 android:gravity="start"
                 android:text="@string/sample_users"
                 android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_ratings_progress"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignBottom="@+id/tv_app_rating"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@id/ll_stars"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <ProgressBar
-                android:id="@+id/positiveRating1"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="90"
-                android:progressDrawable="@drawable/progress_rating1" />
-
-            <ProgressBar
-                android:id="@+id/positiveRating2"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="40"
-                android:progressDrawable="@drawable/progress_rating2" />
-
-            <ProgressBar
-                android:id="@+id/positiveRating3"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="25"
-                android:progressDrawable="@drawable/progress_rating3" />
-
-            <ProgressBar
-                android:id="@+id/positiveRating4"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="10"
-                android:progressDrawable="@drawable/progress_rating4" />
-
-            <ProgressBar
-                android:id="@+id/positiveRating5"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="15"
-                android:progressDrawable="@drawable/progress_rating5" />
         </LinearLayout>
     </RelativeLayout>
 

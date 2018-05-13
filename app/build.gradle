@@ -32,6 +32,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'me.zhanghai.android.materialratingbar:library:1.2.0'
     implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
 
     // LeakCanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
