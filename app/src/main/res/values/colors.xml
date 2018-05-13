@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#34435e</color>
+    <color name="colorPrimaryDark">#242e41</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <color name="colorGrey">#616161</color>
+    <color name="colorLightGrey">#757575</color>
+    <color name="colorVeryLightGrey">#E0E0E0</color>
+    <color name="colorGreyTransparent">#50000000</color>
+
+    <color name="colorPageGrey">#EEEEEE</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorRatingBackground">#f2f2f2</color>
+
+    <color name="colorProgressRating1">#57bb8a</color>
+    <color name="colorProgressRating2">#9ace6a</color>
+    <color name="colorProgressRating3">#ffeb3b</color>
+    <color name="colorProgressRating4">#ffbb50</color>
+    <color name="colorProgressRating5">#ff8a65</color>
+
+    <color name="colorTabBarIcon">#b7bfce</color>
+
+    <color name="colorGreen">#0f9d58</color>
+    <color name="colorGreenDark">#0c7e46</color>
+    <color name="colorBlue">#448AFF</color>
+    <color name="colorBlueDark">#2962FF</color>
+    <color name="colorYellow">#F57F17</color>
+    <color name="colorYellowDark">#FF6F00</color>
+</resources>
