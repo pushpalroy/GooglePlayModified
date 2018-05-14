@@ -28,6 +28,7 @@
     <string name="app_size">29MB</string>
     <string name="install_button">Install</string>
     <string name="install_button_caps">INSTALL</string>
+    <string name="show_full">VIEW</string>
     <string name="downloads">Downloads</string>
     <string name="sample_users">21,831</string>
     <string name="sample_category">Education</string>

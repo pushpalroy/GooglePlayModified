@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/iv_app_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_udacity" />
+
+            <LinearLayout
+                android:id="@+id/ll_app_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/iv_app_image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_header_name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_app_developer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_dev_name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_app_3_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_black_rect"
+                    android:paddingBottom="1dp"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
+                    android:paddingTop="1dp"
+                    android:text="@string/app_three_plus"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_app_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_size"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/iv_clear"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_download_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/tv_download_percent"
+                        android:text="@string/demo_download_size" />
+
+                    <TextView
+                        android:id="@+id/tv_download_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/demo_download_percent" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_app_download"
+                    style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="40" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_clear" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_open_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_uninstall"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_outline"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:stateListAnimator="@null"
+                android:text="@string/button_uninstall"
+                android:theme="@style/AppTheme.UninstallButton" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_open"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:stateListAnimator="@null"
+                android:text="@string/button_open"
+                android:theme="@style/AppTheme.GreenButton" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorVeryLightGrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="65dp"
+                android:layout_height="85dp"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/badge_downloads"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <TextView
+                        android:id="@+id/tv_badge_number"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:background="@drawable/bg_circle_border"
+                        android:gravity="center"
+                        android:text="@string/sample_downloads"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_badge_number_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_item_count"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/million"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_app_downloads_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/downloads"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="65dp"
+                android:layout_height="85dp"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/badge_users"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <TextView
+                        android:id="@+id/tv_badge_users_number"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:background="@drawable/bg_octagon"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:text="@string/_4_3"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_white" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_white" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_white" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_white" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_app_users_label1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:drawableEnd="@drawable/ic_person_grey"
+                    android:gravity="center"
+                    android:text="@string/sample_users"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="65dp"
+                android:layout_height="85dp"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/badge_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/tv_badge_education"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:background="@drawable/bg_circle_solid"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_school_white_24dp"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_app_education_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/education"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="65dp"
+                android:layout_height="85dp"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/badge_similar"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/tv_badge_similar"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:background="@drawable/bg_circle_solid"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_flag_white_24dp"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_app_similar_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/sample_similar"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorVeryLightGrey" />
+
+        <TextView
+            android:id="@+id/tv_app_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:text="@string/app_desc"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating1"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="20"
+            app:donut_finished_color="@color/colorProgressRating5"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="40"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="40" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating2"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="15"
+            app:donut_finished_color="@color/colorProgressRating4"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="30"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="30" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating3"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="10"
+            app:donut_finished_color="@color/colorProgressRating3"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="50"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="50" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="5"
+            app:donut_finished_color="@color/colorProgressRating2"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="70"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="70" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/positiveRating5"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            app:donut_background_color="@color/transparent"
+            app:donut_circle_starting_degree="0"
+            app:donut_finished_color="@color/colorProgressRating1"
+            app:donut_finished_stroke_width="10dp"
+            app:donut_max="100"
+            app:donut_progress="90"
+            app:donut_show_text="false"
+            app:donut_unfinished_color="@color/transparent"
+            app:donut_unfinished_stroke_width="10dp"
+            custom:donut_progress="90" />
+
+        <LinearLayout
+            android:id="@+id/ll_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_app_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/sample_rating"
+                android:textColor="@color/colorGrey"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/rb_app"
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:rating="4.5"
+                android:stepSize="0.5"
+                app:mrb_fillBackgroundStars="true"
+                app:mrb_progressTint="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/tv_app_users_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_person_grey"
+                android:gravity="start"
+                android:text="@string/sample_users"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/install_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/quick_install_button_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/show_full"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>

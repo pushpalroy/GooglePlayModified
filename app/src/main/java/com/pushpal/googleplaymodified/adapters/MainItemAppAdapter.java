@@ -1,6 +1,7 @@
 package com.pushpal.googleplaymodified.adapters;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -136,6 +137,23 @@ public class MainItemAppAdapter extends RecyclerView.Adapter<MainItemAppAdapter.
                         }
                     }.execute(1);
                 }
+            }
+        });
+
+        holder.cardViewLayout.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                final Dialog dialog = new Dialog(mcontext);
+                dialog.setContentView(R.layout.dialog_app_content);
+                dialog.findViewById(R.id.install_button).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(mcontext, AppActivity.class);
+                        mcontext.startActivity(intent);
+                    }
+                });
+                dialog.show();
+                return true;
             }
         });
 
